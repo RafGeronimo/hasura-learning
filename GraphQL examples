@@ -1,0 +1,15 @@
+query MyQuery {
+  Jogadores(where: {Time: {id: {_eq: 2}}}) {
+    Name
+    Nickname
+    Number
+  }
+}
+
+mutation MyMutation {
+  update_Times(where: {id: {_eq: 1}}, _set: {Titulos: 17}) {
+    returning {
+      Time
+    }
+  }
+}
