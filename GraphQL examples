@@ -13,3 +13,12 @@ mutation MyMutation {
     }
   }
 }
+
+mutation MyMutation {
+  update_Jogadores(where: {Number: {_eq: 30}}, _set: {idTime: 2}) {
+    returning {
+      Name
+    }
+  }
+}
+
