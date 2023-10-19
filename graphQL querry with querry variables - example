@@ -1,0 +1,28 @@
+query MyQuery($description: String = "") {
+  detectionControl(where: {description: {_eq: $description}}) {
+    controls {
+      causeOfFailure {
+        failureMode {
+          function {
+            item {
+              version {
+                fmea {
+                  editor
+                  name
+                  project {
+                    id
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+{
+  "description": "Testar protótipo com nova caixa de ventilação"
+}
